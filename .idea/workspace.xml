@@ -53,6 +53,7 @@
     "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.0",
     "project.structure.side.proportion": "0.2",
+    "run.code.analysis.last.selected.profile": "pProject Default",
     "settings.editor.selected.configurable": "reference.settingsdialog.project.gradle"
   }
 }]]></component>
@@ -62,16 +63,9 @@
       <recent name="Rectangle" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.SquareTests.canCalculatePerimeter">
+  <component name="RunManager" selected="JUnit.SquareTests.canCalculateAreaTriangle">
     <configuration name="Geometry" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="ru.stqa.geometry.Geometry" />
-      <module name="sandbox.main" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="Hello" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Hello" />
       <module name="sandbox.main" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -93,6 +87,22 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="SquareTests.canCalculateAreaTriangle" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="sandbox.test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ru.stqa.geometry.figures.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="ru.stqa.geometry.figures" />
+      <option name="MAIN_CLASS_NAME" value="ru.stqa.geometry.figures.SquareTests" />
+      <option name="METHOD_NAME" value="canCalculateAreaTriangle" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="SquareTests.canCalculatePerimeter" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="sandbox.test" />
       <extension name="coverage">
@@ -104,6 +114,22 @@
       <option name="PACKAGE_NAME" value="ru.stqa.geometry.figures" />
       <option name="MAIN_CLASS_NAME" value="ru.stqa.geometry.figures.SquareTests" />
       <option name="METHOD_NAME" value="canCalculatePerimeter" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SquareTests.canCalculatePerimeterTriangle" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="sandbox.test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ru.stqa.geometry.figures.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="ru.stqa.geometry.figures" />
+      <option name="MAIN_CLASS_NAME" value="ru.stqa.geometry.figures.SquareTests" />
+      <option name="METHOD_NAME" value="canCalculatePerimeterTriangle" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -124,10 +150,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.SquareTests.canCalculateAreaTriangle" />
+        <item itemvalue="JUnit.SquareTests.canCalculatePerimeterTriangle" />
+        <item itemvalue="Application.Geometry" />
         <item itemvalue="JUnit.SquareTests.canCalculatePerimeter" />
         <item itemvalue="JUnit.SquareTests.canCalculateArea" />
-        <item itemvalue="Application.Hello" />
-        <item itemvalue="Application.Geometry" />
       </list>
     </recent_temporary>
   </component>
@@ -141,5 +168,10 @@
       <updated>1757771586638</updated>
     </task>
     <servers />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/sandbox$SquareTests_canCalculateAreaTriangle.ic" NAME="SquareTests.canCalculateAreaTriangle Coverage Results" MODIFIED="1757786511182" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>ru.stqa.geometry.figures.*</FILTER>
+    </SUITE>
   </component>
 </project>
