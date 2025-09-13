@@ -56,9 +56,15 @@
     "settings.editor.selected.configurable": "reference.settingsdialog.project.gradle"
   }
 }]]></component>
-  <component name="RunManager" selected="Application.Geometry">
+  <component name="RecentsManager">
+    <key name="MoveMembersDialog.RECENTS_KEY">
+      <recent name="Square" />
+      <recent name="Rectangle" />
+    </key>
+  </component>
+  <component name="RunManager" selected="JUnit.SquareTests.canCalculatePerimeter">
     <configuration name="Geometry" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Geometry" />
+      <option name="MAIN_CLASS_NAME" value="ru.stqa.geometry.Geometry" />
       <module name="sandbox.main" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -67,6 +73,38 @@
     <configuration name="Hello" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Hello" />
       <module name="sandbox.main" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SquareTests.canCalculateArea" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="sandbox.test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ru.stqa.geometry.figures.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="ru.stqa.geometry.figures" />
+      <option name="MAIN_CLASS_NAME" value="ru.stqa.geometry.figures.SquareTests" />
+      <option name="METHOD_NAME" value="canCalculateArea" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SquareTests.canCalculatePerimeter" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="sandbox.test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ru.stqa.geometry.figures.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="ru.stqa.geometry.figures" />
+      <option name="MAIN_CLASS_NAME" value="ru.stqa.geometry.figures.SquareTests" />
+      <option name="METHOD_NAME" value="canCalculatePerimeter" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -86,6 +124,8 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.SquareTests.canCalculatePerimeter" />
+        <item itemvalue="JUnit.SquareTests.canCalculateArea" />
         <item itemvalue="Application.Geometry" />
         <item itemvalue="Application.Hello" />
       </list>
