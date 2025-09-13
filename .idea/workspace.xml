@@ -126,8 +126,8 @@
       <list>
         <item itemvalue="JUnit.SquareTests.canCalculatePerimeter" />
         <item itemvalue="JUnit.SquareTests.canCalculateArea" />
-        <item itemvalue="Application.Geometry" />
         <item itemvalue="Application.Hello" />
+        <item itemvalue="Application.Geometry" />
       </list>
     </recent_temporary>
   </component>
