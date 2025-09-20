@@ -17,18 +17,18 @@ public class SquareTests {
         Assertions.assertEquals(20.0, new Square(5.0).perimeter());
     }
 
-    @Test
-    void canCalculatePerimeterTriangle() {
-        var p = new Triangle (5, 10, 10);
-        double result = p.trianglePerimeter();
-        Assertions.assertEquals(25, result);
-    }
+
 
     @Test
-    void canCalculateAreaTriangle() {
-        var q = new Triangle (5.0, 5.0, 6.0);
-        double result = q.triangleArea();
-        Assertions.assertEquals(12, result);
+    void cannotCreateSquareWithNegativeSide() {
+        try {
+            new Square(-5.0);
+            Assertions.fail();
+        } catch (IllegalArgumentException exception) {
+            //OK
+        }
     }
 
 }
+
+
