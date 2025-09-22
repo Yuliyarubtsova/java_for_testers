@@ -1,5 +1,7 @@
 package ru.stqa.geometry.figures;
 
+import java.util.Objects;
+
 public record Triangle(double x, double y, double z) {
 
     public Triangle {
@@ -9,6 +11,24 @@ public record Triangle(double x, double y, double z) {
         if (x + y < z || x + z < y || z + y < x) {
             throw new IllegalArgumentException("Triangle sides are incorrect");
         }
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Triangle triangle = (Triangle) o;
+        return Double.compare(triangle.x, this.x) == 0 && Double.compare(triangle.y, this.y) == 0 && Double.compare(triangle.z, this.z) == 0
+            || Double.compare(triangle.x, this.y) == 0 && Double.compare(triangle.y, this.z) == 0 && Double.compare(triangle.z, this.x) == 0
+            || Double.compare(triangle.x, this.x) == 0 && Double.compare(triangle.y, this.z) == 0 && Double.compare(triangle.z, this.y) == 0
+            || Double.compare(triangle.x, this.z) == 0 && Double.compare(triangle.y, this.y) == 0 && Double.compare(triangle.z, this.x) == 0
+            || Double.compare(triangle.x, this.y) == 0 && Double.compare(triangle.y, this.x) == 0 && Double.compare(triangle.z, this.z) == 0
+            || Double.compare(triangle.x, this.y) == 0 && Double.compare(triangle.y, this.x) == 0 && Double.compare(triangle.z, this.y) == 0;
+    }
+
+    @Override
+    public int hashCode() {
+        return 1;
     }
 
     public static void printTrianglePerimeter(double x, double y, double z) {
