@@ -18,12 +18,12 @@ public record Triangle(double x, double y, double z) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Triangle triangle = (Triangle) o;
-        return Double.compare(triangle.x, this.x) == 0 && Double.compare(triangle.y, this.y) == 0 && Double.compare(triangle.z, this.z) == 0
-            || Double.compare(triangle.x, this.y) == 0 && Double.compare(triangle.y, this.z) == 0 && Double.compare(triangle.z, this.x) == 0
-            || Double.compare(triangle.x, this.x) == 0 && Double.compare(triangle.y, this.z) == 0 && Double.compare(triangle.z, this.y) == 0
-            || Double.compare(triangle.x, this.z) == 0 && Double.compare(triangle.y, this.y) == 0 && Double.compare(triangle.z, this.x) == 0
-            || Double.compare(triangle.x, this.y) == 0 && Double.compare(triangle.y, this.x) == 0 && Double.compare(triangle.z, this.z) == 0
-            || Double.compare(triangle.x, this.y) == 0 && Double.compare(triangle.y, this.x) == 0 && Double.compare(triangle.z, this.y) == 0;
+        return (Double.compare(triangle.x, this.x) == 0 && Double.compare(triangle.y, this.y) == 0 && Double.compare(triangle.z, this.z) == 0)
+            || (Double.compare(triangle.x, this.y) == 0 && Double.compare(triangle.y, this.z) == 0 && Double.compare(triangle.z, this.x) == 0)
+            || (Double.compare(triangle.x, this.x) == 0 && Double.compare(triangle.y, this.z) == 0 && Double.compare(triangle.z, this.y) == 0)
+            || (Double.compare(triangle.x, this.z) == 0 && Double.compare(triangle.y, this.y) == 0 && Double.compare(triangle.z, this.x) == 0)
+            || (Double.compare(triangle.x, this.y) == 0 && Double.compare(triangle.y, this.x) == 0 && Double.compare(triangle.z, this.z) == 0)
+            || (Double.compare(triangle.x, this.z) == 0 && Double.compare(triangle.y, this.x) == 0 && Double.compare(triangle.z, this.y) == 0);
     }
 
     @Override

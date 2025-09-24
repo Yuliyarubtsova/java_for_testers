@@ -20,8 +20,8 @@ public record Rectangle(double a, double b) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Rectangle rectangle = (Rectangle) o;
-        return Double.compare(rectangle.a, this.a) == 0 && Double.compare(rectangle.b, this.b) == 0
-                || Double.compare(rectangle.a, this.b) == 0 && Double.compare(rectangle.b, this.a) == 0;
+        return (Double.compare(rectangle.a, this.a) == 0 && Double.compare(rectangle.b, this.b) == 0)
+                || (Double.compare(rectangle.a, this.b) == 0 && Double.compare(rectangle.b, this.a) == 0);
     }
 
     @Override
