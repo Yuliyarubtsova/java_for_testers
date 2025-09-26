@@ -21,9 +21,21 @@
   <component name="ExternalProjectsManager">
     <system id="GRADLE">
       <state>
+        <task path="$PROJECT_DIR$/addressbook_web_tests1">
+          <activation />
+        </task>
         <projects_view>
           <tree_state>
-            <expand />
+            <expand>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="addressbook_web_tests1" type="f1a62948:ProjectNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="sandbox" type="f1a62948:ProjectNode" />
+              </path>
+            </expand>
             <select />
           </tree_state>
         </projects_view>
@@ -53,7 +65,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "jdk.selected.JAVA_MODULE": "zulu-17",
-    "last_opened_file_path": "C:/Users/ПК/Documents/ST/Homework/java_for_testers",
+    "last_opened_file_path": "C:/Gradle",
     "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2",
@@ -67,7 +79,28 @@
       <recent name="Rectangle" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.TriangleTests.testEquality5">
+  <component name="RunManager" selected="Gradle.C:/Users/ПК/Documents/ST/Homework/java_for_testers/addressbook_web_tests1 [dependencies]">
+    <configuration name="C:/Users/ПК/Documents/ST/Homework/java_for_testers/addressbook_web_tests1 [dependencies]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$/addressbook_web_tests1" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="dependencies" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <method v="2" />
+    </configuration>
     <configuration name="RectangleTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="sandbox.test" />
       <extension name="coverage">
@@ -113,22 +146,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TriangleTests.testEquality2" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="sandbox.test" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="ru.stqa.geometry.figures.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="ru.stqa.geometry.figures" />
-      <option name="MAIN_CLASS_NAME" value="ru.stqa.geometry.figures.TriangleTests" />
-      <option name="METHOD_NAME" value="testEquality2" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="TriangleTests.testEquality5" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="sandbox.test" />
       <extension name="coverage">
@@ -160,11 +177,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.C:/Users/ПК/Documents/ST/Homework/java_for_testers/addressbook_web_tests1 [dependencies]" />
         <item itemvalue="JUnit.TriangleTests.testEquality5" />
         <item itemvalue="JUnit.SquareTests" />
         <item itemvalue="JUnit.RectangleTests" />
         <item itemvalue="JUnit.TriangleTests" />
-        <item itemvalue="JUnit.TriangleTests.testEquality2" />
       </list>
     </recent_temporary>
   </component>
