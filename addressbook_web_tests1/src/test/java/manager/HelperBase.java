@@ -3,7 +3,7 @@ package manager;
 import org.openqa.selenium.By;
 
 public class HelperBase {
-    protected ApplicationManager manager;
+    protected final ApplicationManager manager;
 
     public HelperBase(ApplicationManager manager) {
         this.manager = manager;
