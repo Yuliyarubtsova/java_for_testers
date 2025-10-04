@@ -80,7 +80,7 @@
     </key>
   </component>
   <component name="RunManager" selected="Gradle.Tests in 'tests'">
-    <configuration name="ContactCreationTests (1)" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="ContactCreationTests.createContacts" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$/addressbook_web_tests1" />
@@ -93,7 +93,7 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;tests.ContactCreationTests&quot;" />
+            <option value="&quot;tests.ContactCreationTests.createContacts&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -212,16 +212,16 @@
       <item itemvalue="Gradle.ContactRemovalTests" />
       <item itemvalue="Gradle.ContactRemovalTests.removeContactTests" />
       <item itemvalue="Gradle.Tests in 'tests'" />
+      <item itemvalue="Gradle.ContactCreationTests.createContacts" />
       <item itemvalue="Gradle.GroupCreationTests" />
-      <item itemvalue="Gradle.ContactCreationTests (1)" />
     </list>
     <recent_temporary>
       <list>
         <item itemvalue="Gradle.Tests in 'tests'" />
+        <item itemvalue="Gradle.ContactCreationTests.createContacts" />
+        <item itemvalue="Gradle.ContactRemovalTests" />
         <item itemvalue="Gradle.ContactRemovalTests.removeContactTests" />
         <item itemvalue="Gradle.GroupCreationTests" />
-        <item itemvalue="Gradle.ContactRemovalTests" />
-        <item itemvalue="Gradle.ContactCreationTests (1)" />
       </list>
     </recent_temporary>
   </component>

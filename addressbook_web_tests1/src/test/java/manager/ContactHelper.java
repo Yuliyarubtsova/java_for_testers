@@ -1,6 +1,7 @@
 package manager;
 
 import model.ContactData;
+import model.GroupData;
 import org.openqa.selenium.By;
 
 public class ContactHelper extends HelperBase{
@@ -15,26 +16,43 @@ public class ContactHelper extends HelperBase{
     }
 
     public void createContact(ContactData contact) {
-        manager.driver.findElement(By.linkText("add new")).click();
-        manager.driver.findElement(By.name("firstname")).click();
-        manager.driver.findElement(By.name("firstname")).sendKeys(contact.firstname());
-        manager.driver.findElement(By.name("lastname")).click();
-        manager.driver.findElement(By.name("lastname")).sendKeys(contact.lastname());
-        manager.driver.findElement(By.name("address")).click();
-        manager.driver.findElement(By.name("address")).sendKeys(contact.address());
-        manager.driver.findElement(By.name("mobile")).click();
-        manager.driver.findElement(By.name("mobile")).sendKeys(contact.mobile());
-        manager.driver.findElement(By.name("email")).click();
-        manager.driver.findElement(By.name("email")).sendKeys(contact.email());
-        manager.driver.findElement(By.name("homepage")).click();
-        manager.driver.findElement(By.name("homepage")).sendKeys(contact.homepage());
-        manager.driver.findElement(By.name("submit")).click();
-        manager.driver.findElement(By.linkText("home page")).click();
+        pressAddNewContact();
+        fillContactForm(contact);
+        submitContactCreation();
+        returnToHomePage();
     }
 
     public void removeContact() {
-        manager.driver.findElement(By.name("selected[]")).click();
-        manager.driver.findElement(By.name("delete")).click();
-        manager.driver.findElement(By.linkText("home page")).click();
+        selectContact();
+        removeSelectedContact();
+        returnToHomePage();
     }
+
+    private void pressAddNewContact() {
+        click(By.linkText("add new"));
+    }
+
+    private void fillContactForm(ContactData contact) {
+        type(By.name("firstname"), contact.firstname());
+        type(By.name("lastname"), contact.lastname());
+        type(By.name("address"), contact.address());
+        type(By.name("mobile"), contact.mobile());
+        type(By.name("email"), contact.email());
+        type(By.name("homepage"), contact.homepage());
+    }
+    private void selectContact() {
+        click(By.name("selected[]"));
+    }
+
+    private void removeSelectedContact() {
+        click(By.name("delete"));
+    }
+
+    private void returnToHomePage() {
+        click(By.linkText("home page"));
+    }
+    private void submitContactCreation() {
+        click(By.name("submit"));
+    }
+
 }
