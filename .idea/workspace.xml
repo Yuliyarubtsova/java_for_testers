@@ -24,6 +24,9 @@
         <task path="$PROJECT_DIR$/addressbook_web_tests1">
           <activation />
         </task>
+        <task path="$PROJECT_DIR$/sandbox">
+          <activation />
+        </task>
         <projects_view>
           <tree_state>
             <expand>
@@ -79,54 +82,8 @@
       <recent name="Rectangle" />
     </key>
   </component>
-  <component name="RunManager" selected="Gradle.CollectionTests.listTests">
-    <configuration name="CollectionTests.arrayTests" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$/sandbox" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value=":test" />
-            <option value="--tests" />
-            <option value="&quot;ru.stqa.collections.CollectionTests.arrayTests&quot;" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <method v="2" />
-    </configuration>
-    <configuration name="CollectionTests.listTests" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$/sandbox" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value=":test" />
-            <option value="--tests" />
-            <option value="&quot;ru.stqa.collections.CollectionTests.listTests&quot;" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <method v="2" />
-    </configuration>
-    <configuration name="ContactCreationTests.createContacts" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+  <component name="RunManager" selected="Gradle.GroupCreationTests">
+    <configuration name="GroupCreationTests" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$/addressbook_web_tests1" />
@@ -139,7 +96,7 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;tests.ContactCreationTests.createContacts&quot;" />
+            <option value="&quot;tests.GroupCreationTests&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -149,7 +106,7 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="ContactRemovalTests" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="GroupCreationTests.canCreateGroup" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$/addressbook_web_tests1" />
@@ -162,7 +119,7 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;tests.ContactRemovalTests&quot;" />
+            <option value="&quot;tests.GroupCreationTests.canCreateGroup&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -172,7 +129,7 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="Tests in 'tests'" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="GroupCreationTests.canCreateMultipleGroups" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$/addressbook_web_tests1" />
@@ -185,7 +142,53 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;tests.*&quot;" />
+            <option value="&quot;tests.GroupCreationTests.canCreateMultipleGroups&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="GroupCreationTests.canNotCreateGroup" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$/addressbook_web_tests1" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;tests.GroupCreationTests.canNotCreateGroup&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="GroupRemovalTests.canRemoveAllGroupsAtOnce" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$/addressbook_web_tests1" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;tests.GroupRemovalTests.canRemoveAllGroupsAtOnce&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -209,19 +212,19 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="Gradle.CollectionTests.arrayTests" />
-      <item itemvalue="Gradle.CollectionTests.listTests" />
-      <item itemvalue="Gradle.ContactRemovalTests" />
-      <item itemvalue="Gradle.Tests in 'tests'" />
-      <item itemvalue="Gradle.ContactCreationTests.createContacts" />
+      <item itemvalue="Gradle.GroupCreationTests.canCreateMultipleGroups" />
+      <item itemvalue="Gradle.GroupCreationTests.canNotCreateGroup" />
+      <item itemvalue="Gradle.GroupRemovalTests.canRemoveAllGroupsAtOnce" />
+      <item itemvalue="Gradle.GroupCreationTests" />
+      <item itemvalue="Gradle.GroupCreationTests.canCreateGroup" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Gradle.CollectionTests.listTests" />
-        <item itemvalue="Gradle.CollectionTests.arrayTests" />
-        <item itemvalue="Gradle.Tests in 'tests'" />
-        <item itemvalue="Gradle.ContactCreationTests.createContacts" />
-        <item itemvalue="Gradle.ContactRemovalTests" />
+        <item itemvalue="Gradle.GroupCreationTests" />
+        <item itemvalue="Gradle.GroupCreationTests.canNotCreateGroup" />
+        <item itemvalue="Gradle.GroupCreationTests.canCreateMultipleGroups" />
+        <item itemvalue="Gradle.GroupRemovalTests.canRemoveAllGroupsAtOnce" />
+        <item itemvalue="Gradle.GroupCreationTests.canCreateGroup" />
       </list>
     </recent_temporary>
   </component>
