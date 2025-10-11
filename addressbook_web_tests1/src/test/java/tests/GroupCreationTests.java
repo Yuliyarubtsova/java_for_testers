@@ -2,7 +2,6 @@ package tests;
 
 import model.GroupData;
 import org.junit.jupiter.api.Assertions;
-import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.MethodSource;
 
@@ -29,9 +28,9 @@ public class GroupCreationTests extends TestBase {
     @ParameterizedTest
     @MethodSource("groupProvider")
     public void canCreateMultipleGroups(GroupData group) {
-        int groupCount = app.groups().getCount();
+        int groupCount = app.groups().getCountGroups();
         app.groups().createGroup(group);
-        int newGroupCount = app.groups().getCount();
+        int newGroupCount = app.groups().getCountGroups();
         Assertions.assertEquals(groupCount + 1, newGroupCount);
     }
 
@@ -43,9 +42,9 @@ public class GroupCreationTests extends TestBase {
     @ParameterizedTest
     @MethodSource("negativeGroupProvider")
     public void canNotCreateGroup(GroupData group) {
-        int groupCount = app.groups().getCount();
+        int groupCount = app.groups().getCountGroups();
         app.groups().createGroup(group);
-        int newGroupCount = app.groups().getCount();
+        int newGroupCount = app.groups().getCountGroups();
         Assertions.assertEquals(groupCount, newGroupCount);
     }
 }

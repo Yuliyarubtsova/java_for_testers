@@ -24,12 +24,7 @@ public class CollectionTests {
     void listTests() {
         var list = new ArrayList<>(List.of("a", "b", "c"));
         Assertions.assertEquals(3, list.size());
-
-       // list.add("a");
-       // list.add("b");
-       // list.add("c");
         Assertions.assertEquals("a", list.get(0));
-
         list.set(0, "d");
         Assertions.assertEquals("d", list.get(0));
     }
