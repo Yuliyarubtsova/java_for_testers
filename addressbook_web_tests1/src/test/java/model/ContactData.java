@@ -1,6 +1,6 @@
 package model;
 
-public record ContactData(String id, String firstname, String lastname, String address, String mobile, String email, String homepage) {
+public record ContactData(String id, String lastname,  String firstname, String address, String mobile, String email, String homepage) {
 
     public ContactData() {
         this("", "","","","","","");
@@ -16,22 +16,22 @@ public record ContactData(String id, String firstname, String lastname, String a
     }
 
     public ContactData withFirstname(String firstname) {
-        return new ContactData(this.id, firstname, this.lastname, this.address, this.mobile, this.email, this.homepage);
+        return new ContactData(this.id, this.lastname, firstname,  this.address, this.mobile, this.email, this.homepage);
     }
     public ContactData withAddress(String address) {
-        return new ContactData(this.id, this.firstname, this.lastname, address, this.mobile, this.email, this.homepage);
+        return new ContactData(this.id, this.lastname, this.firstname,  address, this.mobile, this.email, this.homepage);
     }
 
     public ContactData withMobile(String mobile) {
-        return new ContactData(this.id, this.firstname, this.lastname, this.address, mobile, this.email, this.homepage);
+        return new ContactData(this.id, this.lastname, this.firstname,  this.address, mobile, this.email, this.homepage);
     }
 
     public ContactData withEmail(String email) {
-        return new ContactData(this.id, this.firstname, this.lastname, this.address, this.mobile, email, this.homepage);
+        return new ContactData(this.id, this.lastname, this.firstname,  this.address, this.mobile, email, this.homepage);
     }
 
     public ContactData withHomepage(String homepage) {
-        return new ContactData(this.id, this.firstname, this.lastname, this.address, this.mobile, this.email, homepage);
+        return new ContactData(this.id, this.lastname, this.firstname,  this.address, this.mobile, this.email, homepage);
     }
 
 }
