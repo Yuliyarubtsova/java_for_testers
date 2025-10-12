@@ -82,7 +82,7 @@
       <recent name="Rectangle" />
     </key>
   </component>
-  <component name="RunManager" selected="Gradle.ContactModificationTests.canModifyContact">
+  <component name="RunManager" selected="Gradle.ContactCreationTests.canCreateMultipleContacts">
     <configuration name="ContactCreationTests.canCreateMultipleContacts" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -152,7 +152,7 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="ContactRemovalTests.removeContactTests" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="ContactRemovalTests.removeAllContactTests" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$/addressbook_web_tests1" />
@@ -165,7 +165,7 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;tests.ContactRemovalTests.removeContactTests&quot;" />
+            <option value="&quot;tests.ContactRemovalTests.removeAllContactTests&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -214,17 +214,17 @@
     <list>
       <item itemvalue="Gradle.ContactCreationTests.canCreateMultipleContacts" />
       <item itemvalue="Gradle.ContactModificationTests.canModifyContact" />
-      <item itemvalue="Gradle.ContactRemovalTests.removeContactTests" />
+      <item itemvalue="Gradle.ContactRemovalTests.removeAllContactTests" />
       <item itemvalue="Gradle.GroupModificationTests.canModifyGroup" />
       <item itemvalue="Gradle.ContactCreationTests.createContacts" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.ContactCreationTests.canCreateMultipleContacts" />
+        <item itemvalue="Gradle.ContactRemovalTests.removeAllContactTests" />
         <item itemvalue="Gradle.ContactModificationTests.canModifyContact" />
         <item itemvalue="Gradle.GroupModificationTests.canModifyGroup" />
         <item itemvalue="Gradle.ContactCreationTests.createContacts" />
-        <item itemvalue="Gradle.ContactCreationTests.canCreateMultipleContacts" />
-        <item itemvalue="Gradle.ContactRemovalTests.removeContactTests" />
       </list>
     </recent_temporary>
   </component>
