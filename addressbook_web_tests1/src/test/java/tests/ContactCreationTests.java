@@ -1,7 +1,6 @@
 package tests;
 
 import model.ContactData;
-import model.GroupData;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
@@ -21,7 +20,7 @@ public class ContactCreationTests extends TestBase{
                   for (var mobile : List.of("", "mobile")) {
                       for (var email : List.of("", "email")) {
                           for (var homepage : List.of("", "homepage")) {
-                              result.add(new ContactData(firstname, lastname, address, mobile, email, homepage));
+                              result.add(new ContactData().withFirstname(firstname).withLastname(lastname).withAddress(address).withMobile(mobile).withEmail(email).withHomepage(homepage));
                           }
                       }
                   }
@@ -29,7 +28,13 @@ public class ContactCreationTests extends TestBase{
             }
         }
         for (int i = 0; i < 3; i++) {
-            result.add(new ContactData(randomString(i * 2), randomString(i * 2), randomString(i * 2), randomString(i * 2), randomString(i * 2), randomString(i * 2)));
+            result.add(new ContactData()
+                    .withFirstname(randomString(i * 2))
+                    .withLastname(randomString(i * 2))
+                    .withAddress(randomString(i * 2))
+                    .withMobile(randomString(i * 2))
+                    .withEmail(randomString(i * 2))
+                    .withHomepage(randomString(i * 2)));
         }
         return result;
     }
@@ -44,6 +49,6 @@ public class ContactCreationTests extends TestBase{
     }
     @Test
     public void createContacts() {
-        app.contacts().createContact(new ContactData("Ivan", "Ivanovich", "Moscow", "123456789", "x5@mail.ru", "veselyebobry.ru"));
+        app.contacts().createContact(new ContactData("", "Ivan", "Ivanovich", "Moscow", "123456789", "x5@mail.ru", "veselyebobry.ru"));
     }
 }

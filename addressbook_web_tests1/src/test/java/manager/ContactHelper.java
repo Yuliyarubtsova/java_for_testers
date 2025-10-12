@@ -3,6 +3,9 @@ package manager;
 import model.ContactData;
 import org.openqa.selenium.By;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class ContactHelper extends HelperBase{
 
     public ContactHelper(ApplicationManager manager) {
@@ -14,9 +17,9 @@ public class ContactHelper extends HelperBase{
          return manager.driver.findElements(By.name("selected[]")).size();
     }
 
-    public boolean isContactPresent() {
-        return manager.isElementPresent(By.name("selected[]"));
-    }
+//    public boolean isContactPresent() {
+//        return manager.isElementPresent(By.name("selected[]"));
+//    }
 
     public void createContact(ContactData contact) {
         pressAddNewContact();
@@ -25,8 +28,8 @@ public class ContactHelper extends HelperBase{
         returnToHomePage();
     }
 
-    public void removeContact() {
-        selectContact();
+    public void removeContact(ContactData center) {
+        selectContact(center);
         removeSelectedContacts();
         returnToHomePage();
     }
@@ -43,8 +46,8 @@ public class ContactHelper extends HelperBase{
         type(By.name("email"), contact.email());
         type(By.name("homepage"), contact.homepage());
     }
-    private void selectContact() {
-        click(By.name("selected[]"));
+    private void selectContact(ContactData center) {
+        click(By.cssSelector(String.format("input[value='%s']", center.id())));
     }
 
     private void removeSelectedContacts() {
@@ -68,5 +71,17 @@ public class ContactHelper extends HelperBase{
         for (var checkbox : checkboxes) {
             checkbox.click();
         }
+    }
+
+    public List<ContactData> getList() {
+        var contacts = new ArrayList<ContactData>();
+        var tds = manager.driver.findElements(By.cssSelector("td.center"));
+        for (var td : tds) {
+            var name = td.getText();
+            var checkbox = td.findElement(By.name("selected[]"));
+            var id = checkbox.getAttribute("value");
+            contacts.add(new ContactData().withId(id).withFirstname(name));
+        }
+        return contacts;
     }
 }
