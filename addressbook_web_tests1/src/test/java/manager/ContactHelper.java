@@ -49,10 +49,12 @@ public class ContactHelper extends HelperBase{
     private void fillContactForm(ContactData contact) {
         type(By.name("lastname"), contact.lastname());
         type(By.name("firstname"), contact.firstname());
+        attach(By.name("photo"), contact.photo());
         type(By.name("address"), contact.address());
         type(By.name("mobile"), contact.mobile());
         type(By.name("email"), contact.email());
         type(By.name("homepage"), contact.homepage());
+
     }
     private void selectContact(ContactData center) {
         click(By.cssSelector(String.format("input[value='%s']", center.id())));

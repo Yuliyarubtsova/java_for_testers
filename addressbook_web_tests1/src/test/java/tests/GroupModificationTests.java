@@ -18,7 +18,7 @@ public class GroupModificationTests extends TestBase{
         var oldGroups = app.groups().getList();
         var rnd = new Random();
         var index = rnd.nextInt(oldGroups.size());
-        var testData = new GroupData().withName("modified name");
+        var testData = new GroupData().withName("modified name2");
         app.groups().modifyGroup(oldGroups.get(index), testData);
         var newGroups = app.groups().getList();
         var expectedList = new ArrayList<>(oldGroups);
