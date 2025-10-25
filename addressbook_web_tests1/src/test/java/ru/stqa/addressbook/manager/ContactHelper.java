@@ -17,12 +17,19 @@ public class ContactHelper extends HelperBase{
          return manager.driver.findElements(By.name("selected[]")).size();
     }
 
-    public void createContact(ContactData contact) {
+    public void createContactWithPhoto(ContactData contact) {
         pressAddNewContact();
-        fillContactForm(contact);
+        fillContactFormWithPhoto(contact);
         submitContactCreation();
         returnToHomePage();
     }
+    public void createContactWithoutPhoto(ContactData contact) {
+        pressAddNewContact();
+        fillContactFormWithoutPhoto(contact);
+        submitContactCreation();
+        returnToHomePage();
+    }
+
 
     public void removeContact(ContactData contact) {
         selectContact(contact);
@@ -32,7 +39,7 @@ public class ContactHelper extends HelperBase{
 
     public void modifyContact(ContactData contact, ContactData modifiedContact) {
         initContactModification(contact);
-        fillContactForm(modifiedContact);
+        fillContactFormWithPhoto(modifiedContact);
         submitContactModification();
         returnToHomePage();
 
@@ -46,10 +53,20 @@ public class ContactHelper extends HelperBase{
         click(By.linkText("add new"));
     }
 
-    private void fillContactForm(ContactData contact) {
+    private void fillContactFormWithPhoto(ContactData contact) {
         type(By.name("lastname"), contact.lastname());
         type(By.name("firstname"), contact.firstname());
+        type(By.name("address"), contact.address());
+        type(By.name("mobile"), contact.mobile());
+        type(By.name("email"), contact.email());
+        type(By.name("homepage"), contact.homepage());
         attach(By.name("photo"), contact.photo());
+
+    }
+
+    private void fillContactFormWithoutPhoto(ContactData contact) {
+        type(By.name("lastname"), contact.lastname());
+        type(By.name("firstname"), contact.firstname());
         type(By.name("address"), contact.address());
         type(By.name("mobile"), contact.mobile());
         type(By.name("email"), contact.email());

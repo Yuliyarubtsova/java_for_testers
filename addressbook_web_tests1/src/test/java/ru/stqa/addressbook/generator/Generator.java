@@ -16,6 +16,8 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.util.ArrayList;
 
+import static ru.stqa.addressbook.tests.TestBase.randomFile;
+
 public class Generator {
 
     @Parameter(names = {"--type", "-t"})
@@ -88,17 +90,14 @@ public class Generator {
             try (var writer = new FileWriter(output)) {
                 writer.write(json);
             }
-
-        } if ("yaml".equals(format)) {
+        } else if ("yaml".equals(format)) {
             var mapper = new YAMLMapper();
             mapper.writeValue(new File(output), data);
-        } if ("xml".equals(format)) {
+        } else if ("xml".equals(format)) {
             var mapper = new XmlMapper();
             mapper.writeValue(new File(output), data);
-        }
-        else {
+        } else {
             throw new IllegalArgumentException("Неизвестный формат данных " + format);
         }
     }
-
 }
