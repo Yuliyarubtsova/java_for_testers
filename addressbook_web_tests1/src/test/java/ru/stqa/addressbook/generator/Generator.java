@@ -70,13 +70,15 @@ public class Generator {
     private Object generateContacts() {
         var result = new ArrayList<ContactData>();
         for (int i = 0; i < count; i++) {
+            String photoPath = randomFile("src/test/resources/images").replace('\\', '/');
             result.add(new ContactData()
                     .withFirstname(CommonFunctions.randomString(i * 2))
                     .withLastname(CommonFunctions.randomString(i * 2))
                     .withAddress(CommonFunctions.randomString(i * 2))
                     .withMobile(CommonFunctions.randomString(i * 2))
                     .withEmail(CommonFunctions.randomString(i * 2))
-                    .withHomepage(CommonFunctions.randomString(i * 2)));
+                    .withHomepage(CommonFunctions.randomString(i * 2))
+                    .withPhoto(photoPath));
         }
         return result;
     }

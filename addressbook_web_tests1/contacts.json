@@ -6,23 +6,23 @@
   "mobile" : "",
   "email" : "",
   "homepage" : "",
-  "photo" : ""
+  "photo" : "src/test/resources/images/puppy.png"
 }, {
   "id" : "",
-  "lastname" : "bq",
-  "firstname" : "ik",
-  "address" : "dh",
-  "mobile" : "qs",
-  "email" : "xc",
-  "homepage" : "rx",
-  "photo" : ""
+  "lastname" : "fl",
+  "firstname" : "ej",
+  "address" : "rk",
+  "mobile" : "qc",
+  "email" : "uc",
+  "homepage" : "uu",
+  "photo" : "src/test/resources/images/avatar.png"
 }, {
   "id" : "",
-  "lastname" : "hpeb",
-  "firstname" : "ekfq",
-  "address" : "hfls",
-  "mobile" : "pedy",
-  "email" : "lmzc",
-  "homepage" : "mqqa",
-  "photo" : ""
+  "lastname" : "ysmc",
+  "firstname" : "yjsa",
+  "address" : "tepz",
+  "mobile" : "xydx",
+  "email" : "pirb",
+  "homepage" : "ezku",
+  "photo" : "src/test/resources/images/strawberry.png"
 } ]

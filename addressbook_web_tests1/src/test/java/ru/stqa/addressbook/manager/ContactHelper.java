@@ -39,7 +39,7 @@ public class ContactHelper extends HelperBase{
 
     public void modifyContact(ContactData contact, ContactData modifiedContact) {
         initContactModification(contact);
-        fillContactFormWithPhoto(modifiedContact);
+        fillContactFormWithoutPhoto(modifiedContact);
         submitContactModification();
         returnToHomePage();
 
