@@ -29,7 +29,6 @@ public class GroupCreationTests extends TestBase {
                 .withName(CommonFunctions.randomString(10))
                 .withHeader(CommonFunctions.randomString(20))
                 .withFooter(CommonFunctions.randomString(30)));
-
     }
 
     @ParameterizedTest
@@ -43,15 +42,10 @@ public class GroupCreationTests extends TestBase {
         };
         newGroups.sort(compareById);
         var maxId = newGroups.get(newGroups.size() - 1).id();
-
         var expectedList = new ArrayList<>(oldGroups);
         expectedList.add(group.withId(maxId));
         expectedList.sort(compareById);
         Assertions.assertEquals(newGroups, expectedList);
-
-//        var newUIGroups = app.groups().getList();
-//        newUIGroups.sort(compareById);
-//        Assertions.assertEquals();
     }
 
     public static List<GroupData> negativeGroupProvider() {
@@ -62,9 +56,9 @@ public class GroupCreationTests extends TestBase {
     @ParameterizedTest
     @MethodSource("negativeGroupProvider")
     public void canNotCreateGroup(GroupData group) {
-        var oldGroups = app.groups().getList();
+        var oldGroups = app.hbm().getGroupList();
         app.groups().createGroup(group);
-        var newGroups = app.groups().getList();
+        var newGroups = app.hbm().getGroupList();
         Assertions.assertEquals(newGroups, oldGroups);
     }
 }
