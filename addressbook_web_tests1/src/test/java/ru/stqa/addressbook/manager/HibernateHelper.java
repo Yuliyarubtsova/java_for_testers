@@ -113,4 +113,5 @@ public class HibernateHelper extends HelperBase {
             session.getTransaction().commit();
         });
     }
+
 }

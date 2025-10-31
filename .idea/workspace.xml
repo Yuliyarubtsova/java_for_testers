@@ -86,7 +86,30 @@
       <recent name="Rectangle" />
     </key>
   </component>
-  <component name="RunManager" selected="Gradle.ContactRemovalTests.removeContactTests">
+  <component name="RunManager" selected="Gradle.ContactRemovalTests.removeContactFromGroup">
+    <configuration name="ContactCreationTests.canCreateContactInGroup" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$/addressbook_web_tests1" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;ru.stqa.addressbook.tests.ContactCreationTests.canCreateContactInGroup&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <method v="2" />
+    </configuration>
     <configuration name="ContactCreationTests.canCreateSingleContact" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -133,7 +156,7 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="ContactRemovalTests.removeAllContactTests" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="ContactRemovalTests.removeContactFromGroup" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$/addressbook_web_tests1" />
@@ -146,7 +169,7 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;ru.stqa.addressbook.tests.ContactRemovalTests.removeAllContactTests&quot;" />
+            <option value="&quot;ru.stqa.addressbook.tests.ContactRemovalTests.removeContactFromGroup&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -179,29 +202,6 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="GroupCreationTests.canNotCreateGroup" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$/addressbook_web_tests1" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value=":test" />
-            <option value="--tests" />
-            <option value="&quot;ru.stqa.addressbook.tests.GroupCreationTests.canNotCreateGroup&quot;" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <method v="2" />
-    </configuration>
     <configuration default="true" type="JetRunConfigurationType">
       <module name="java_for_testers" />
       <method v="2">
@@ -216,19 +216,19 @@
       </method>
     </configuration>
     <list>
+      <item itemvalue="Gradle.ContactCreationTests.canCreateContactInGroup" />
       <item itemvalue="Gradle.ContactCreationTests.canCreateSingleContact" />
-      <item itemvalue="Gradle.ContactRemovalTests.removeAllContactTests" />
+      <item itemvalue="Gradle.ContactRemovalTests.removeContactFromGroup" />
       <item itemvalue="Gradle.ContactRemovalTests.removeContactTests" />
-      <item itemvalue="Gradle.GroupCreationTests.canNotCreateGroup" />
       <item itemvalue="Gradle.ContactModificationTests.canModifyContact" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.ContactRemovalTests.removeContactFromGroup" />
+        <item itemvalue="Gradle.ContactCreationTests.canCreateContactInGroup" />
         <item itemvalue="Gradle.ContactRemovalTests.removeContactTests" />
         <item itemvalue="Gradle.ContactModificationTests.canModifyContact" />
         <item itemvalue="Gradle.ContactCreationTests.canCreateSingleContact" />
-        <item itemvalue="Gradle.ContactRemovalTests.removeAllContactTests" />
-        <item itemvalue="Gradle.GroupCreationTests.canNotCreateGroup" />
       </list>
     </recent_temporary>
   </component>
@@ -253,7 +253,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/addressbook_web_tests1/src/test/java/ru/stqa/addressbook/manager/ContactHelper.java</url>
-          <line>75</line>
+          <line>109</line>
           <option name="timeStamp" value="52" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
@@ -268,18 +268,28 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/addressbook_web_tests1/src/test/java/ru/stqa/addressbook/tests/ContactRemovalTests.java</url>
-          <line>17</line>
+          <line>19</line>
           <option name="timeStamp" value="64" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/addressbook_web_tests1/src/test/java/ru/stqa/addressbook/tests/ContactRemovalTests.java</url>
-          <line>15</line>
+          <line>17</line>
           <option name="timeStamp" value="65" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/addressbook_web_tests1/src/test/java/ru/stqa/addressbook/tests/ContactModificationTests.java</url>
           <line>15</line>
           <option name="timeStamp" value="67" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/addressbook_web_tests1/src/test/java/ru/stqa/addressbook/tests/ContactRemovalTests.java</url>
+          <line>54</line>
+          <option name="timeStamp" value="68" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/addressbook_web_tests1/src/test/java/ru/stqa/addressbook/tests/ContactRemovalTests.java</url>
+          <line>41</line>
+          <option name="timeStamp" value="69" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

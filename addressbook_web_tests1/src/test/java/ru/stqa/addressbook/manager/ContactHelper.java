@@ -8,7 +8,7 @@ import ru.stqa.addressbook.model.GroupData;
 import java.util.ArrayList;
 import java.util.List;
 
-public class ContactHelper extends HelperBase{
+public class ContactHelper extends HelperBase {
 
     public ContactHelper(ApplicationManager manager) {
         super(manager);
@@ -16,7 +16,7 @@ public class ContactHelper extends HelperBase{
     }
 
     public int getCountContacts() {
-         return manager.driver.findElements(By.name("selected[]")).size();
+        return manager.driver.findElements(By.name("selected[]")).size();
     }
 
     public void createContactWithPhoto(ContactData contact) {
@@ -50,6 +50,40 @@ public class ContactHelper extends HelperBase{
         selectContact(contact);
         removeSelectedContacts();
         returnToHomePage();
+    }
+
+    public void removeContactFromGroup(GroupData group, ContactData contact) {
+        pressGroupList(group);
+        selectContact(contact);
+        pressRemoveFromGroup();
+        returnToHome();
+    }
+
+    public void addContactToGroup(ContactData contact, GroupData group) {
+        selectContact(contact);
+        selectGroupForContact(group);
+        pressAddTo();
+        returnToHome();
+    }
+
+    private void pressAddTo() {
+        click(By.name("add"));
+    }
+
+    private void selectGroupForContact(GroupData group) {
+        new Select(manager.driver.findElement(By.name("to_group"))).selectByValue(group.id());
+    }
+
+    private void returnToHome() {
+        click(By.linkText("home"));
+    }
+
+    private void pressRemoveFromGroup() {
+        click(By.name("remove"));
+    }
+
+    private void pressGroupList(GroupData group) {
+        new Select(manager.driver.findElement(By.name("group"))).selectByValue(group.id());
     }
 
     public void modifyContact(ContactData contact, ContactData modifiedContact) {
@@ -88,6 +122,7 @@ public class ContactHelper extends HelperBase{
         type(By.name("homepage"), contact.homepage());
 
     }
+
     private void selectContact(ContactData center) {
         click(By.cssSelector(String.format("input[value='%s']", center.id())));
     }
@@ -99,6 +134,7 @@ public class ContactHelper extends HelperBase{
     private void returnToHomePage() {
         click(By.linkText("home page"));
     }
+
     private void submitContactCreation() {
         click(By.name("submit"));
     }
@@ -131,4 +167,6 @@ public class ContactHelper extends HelperBase{
         }
         return contacts;
     }
+
+
 }
