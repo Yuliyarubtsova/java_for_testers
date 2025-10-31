@@ -86,7 +86,7 @@
       <recent name="Rectangle" />
     </key>
   </component>
-  <component name="RunManager" selected="Gradle.ContactRemovalTests.removeContactFromGroup">
+  <component name="RunManager" selected="Gradle.ContactCreationTests.canCreateSingleContact">
     <configuration name="ContactCreationTests.canCreateContactInGroup" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -224,11 +224,11 @@
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.ContactCreationTests.canCreateSingleContact" />
         <item itemvalue="Gradle.ContactRemovalTests.removeContactFromGroup" />
         <item itemvalue="Gradle.ContactCreationTests.canCreateContactInGroup" />
         <item itemvalue="Gradle.ContactRemovalTests.removeContactTests" />
         <item itemvalue="Gradle.ContactModificationTests.canModifyContact" />
-        <item itemvalue="Gradle.ContactCreationTests.canCreateSingleContact" />
       </list>
     </recent_temporary>
   </component>
