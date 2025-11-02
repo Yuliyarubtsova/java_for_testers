@@ -102,15 +102,21 @@ public class ContactCreationTests extends TestBase{
             app.hbm().createGroup(new GroupData("", "group name", "group header", "group footer"));
         }
         var group = app.hbm().getGroupList().get(0);
+        var contacts = app.hbm().getContactList();
         ContactData contact = null;
-        if (app.hbm().getContactCount() == 0) {
+        for (var c : contacts) {
+            var contactsInGroup = app.hbm().getContactsInGroup(group);
+            if (!contactsInGroup.contains(c)) {
+                contact = c;
+                break;
+            }
+        }
+        if (contact == null) {
             contact = new ContactData()
                     .withFirstname(CommonFunctions.randomString(10))
                     .withLastname(CommonFunctions.randomString(10))
                     .withPhoto(randomFile("src/test/resources/images"));
             app.contacts().createContactWithPhoto(contact);
-        } else {
-            contact = app.hbm().getContactList().get(0);
         }
         var contactsInGroup = app.hbm().getContactsInGroup(group);
         app.contacts().addContactToGroup(contact, group);
