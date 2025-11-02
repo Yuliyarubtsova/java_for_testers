@@ -123,8 +123,8 @@ public class ContactHelper extends HelperBase {
 
     }
 
-    private void selectContact(ContactData center) {
-        click(By.cssSelector(String.format("input[value='%s']", center.id())));
+    private void selectContact(ContactData contact) {
+        click(By.cssSelector(String.format("input[value='%s']", contact.id())));
     }
 
     private void removeSelectedContacts() {

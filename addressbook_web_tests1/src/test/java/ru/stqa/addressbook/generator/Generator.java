@@ -6,6 +6,7 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.SerializationFeature;
 import com.fasterxml.jackson.dataformat.xml.XmlMapper;
 import com.fasterxml.jackson.dataformat.yaml.YAMLMapper;
+import com.mysql.cj.protocol.x.XProtocolRow;
 import ru.stqa.addressbook.common.CommonFunctions;
 import ru.stqa.addressbook.model.ContactData;
 import ru.stqa.addressbook.model.GroupData;
@@ -14,6 +15,9 @@ import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.function.Supplier;
+import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 import static ru.stqa.addressbook.tests.TestBase.randomFile;
 
@@ -55,15 +59,14 @@ public class Generator {
         }
     }
 
+    private Object generateData(Supplier<Object> dataSupplier) {
+        return Stream.generate(dataSupplier).limit(count).collect(Collectors.toList());
+    }
     private Object generateGroups() {
-        var result = new ArrayList<GroupData>();
-        for (int i = 0; i < count; i++) {
-            result.add(new GroupData()
-                    .withName(CommonFunctions.randomString(i * 10))
-                    .withHeader(CommonFunctions.randomString(i * 10))
-                    .withFooter(CommonFunctions.randomString(i * 10)));
-        }
-        return result;
+        return generateData(() -> new GroupData()
+                .withName(CommonFunctions.randomString(10))
+                .withHeader(CommonFunctions.randomString( 10))
+                .withFooter(CommonFunctions.randomString( 10)));
     }
 
     private Object generateContacts() {
@@ -80,6 +83,12 @@ public class Generator {
                     .withPhoto(photoPath));
         }
         return result;
+    }
+
+    private Object generateContactsFL() {
+        return generateData(() -> new ContactData()
+                .withFirstname(CommonFunctions.randomString(2))
+                .withLastname(CommonFunctions.randomString( 2)));
     }
 
     private void save(Object data) throws IOException {
