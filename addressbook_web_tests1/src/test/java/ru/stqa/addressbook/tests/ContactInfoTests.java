@@ -22,9 +22,23 @@ public class ContactInfoTests extends TestBase {
                 .filter(s -> s != null && !"".equals(s))
                 .collect(Collectors.joining("\n"));
         Assertions.assertEquals(expected, phones);
-
     }
 
+    @Test
+    void testPhonesForAllContacts() {
+        if (app.hbm().getContactCount() == 0) {
+            app.hbm().createContact(new ContactData("", "Ivan", "Ivanovich", "Moscow", "", "123456789", "", "x5@mail.ru", "", "", "veselyebobry.ru", ""));
+            app.contacts().returnToHome();
+        }
+        var contacts = app.hbm().getContactList();
+        var expected = contacts.stream().collect(Collectors.toMap(ContactData::id, contact ->
+            Stream.of(contact.home(), contact.mobile(), contact.work())
+                    .filter(s -> s != null && !"".equals(s))
+                    .collect(Collectors.joining("\n"))
+        ));
+        var phones = app.contacts().getPhones();
+        Assertions.assertEquals(expected, phones);
+        }
     @Test
     void testEmail() {
         if (app.hbm().getContactCount() == 0) {
