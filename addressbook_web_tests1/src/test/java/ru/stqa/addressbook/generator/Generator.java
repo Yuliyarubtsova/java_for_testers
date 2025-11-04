@@ -62,11 +62,12 @@ public class Generator {
     private Object generateData(Supplier<Object> dataSupplier) {
         return Stream.generate(dataSupplier).limit(count).collect(Collectors.toList());
     }
+
     private Object generateGroups() {
         return generateData(() -> new GroupData()
                 .withName(CommonFunctions.randomString(10))
-                .withHeader(CommonFunctions.randomString( 10))
-                .withFooter(CommonFunctions.randomString( 10)));
+                .withHeader(CommonFunctions.randomString(10))
+                .withFooter(CommonFunctions.randomString(10)));
     }
 
     private Object generateContacts() {
@@ -77,6 +78,7 @@ public class Generator {
                     .withFirstname(CommonFunctions.randomString(i * 2))
                     .withLastname(CommonFunctions.randomString(i * 2))
                     .withAddress(CommonFunctions.randomString(i * 2))
+                    .withHome(CommonFunctions.randomString(i * 3))
                     .withMobile(CommonFunctions.randomString(i * 2))
                     .withEmail(CommonFunctions.randomString(i * 2))
                     .withHomepage(CommonFunctions.randomString(i * 2))
@@ -88,7 +90,7 @@ public class Generator {
     private Object generateContactsFL() {
         return generateData(() -> new ContactData()
                 .withFirstname(CommonFunctions.randomString(2))
-                .withLastname(CommonFunctions.randomString( 2)));
+                .withLastname(CommonFunctions.randomString(2)));
     }
 
     private void save(Object data) throws IOException {

@@ -7,6 +7,7 @@ import ru.stqa.addressbook.model.GroupData;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.Stream;
 
 public class ContactHelper extends HelperBase {
 
@@ -24,6 +25,7 @@ public class ContactHelper extends HelperBase {
         fillContactFormWithPhoto(contact);
         submitContactCreation();
         returnToHomePage();
+
     }
 
     public void createContactWithPhoto(ContactData contact, GroupData group) {
@@ -31,7 +33,7 @@ public class ContactHelper extends HelperBase {
         fillContactFormWithPhoto(contact);
         selectGroup(group);
         submitContactCreation();
-        returnToHomePage();
+        returnToHome();
     }
 
     private void selectGroup(GroupData group) {
@@ -42,7 +44,7 @@ public class ContactHelper extends HelperBase {
         pressAddNewContact();
         fillContactFormWithoutPhoto(contact);
         submitContactCreation();
-        returnToHomePage();
+        returnToHome();
     }
 
 
@@ -74,7 +76,7 @@ public class ContactHelper extends HelperBase {
         new Select(manager.driver.findElement(By.name("to_group"))).selectByValue(group.id());
     }
 
-    private void returnToHome() {
+    public void returnToHome() {
         click(By.linkText("home"));
     }
 
@@ -169,4 +171,18 @@ public class ContactHelper extends HelperBase {
     }
 
 
+    public String getPhones(ContactData contact) {
+        return manager.driver.findElement(By.xpath(
+                String.format("//input[@id='%s']/../../td[6]", contact.id()))).getText();
+    }
+
+    public String getEmails(ContactData contact) {
+        return manager.driver.findElement(By.xpath(
+                String.format("//input[@id='%s']/../../td[5]", contact.id()))).getText();
+    }
+
+    public String getAddress(ContactData contact) {
+        return manager.driver.findElement(By.xpath(
+                String.format("//input[@id='%s']/../../td[4]", contact.id()))).getText();
+    }
 }

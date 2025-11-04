@@ -69,7 +69,7 @@ public class ContactCreationTests extends TestBase {
 
     @Test
     public void createContacts() {
-        app.contacts().createContactWithoutPhoto(new ContactData("", "Ivan", "Ivanovich", "Moscow", "123456789", "x5@mail.ru", "veselyebobry.ru", ""));
+        app.contacts().createContactWithoutPhoto(new ContactData("", "Ivan", "Ivanovich", "Moscow", "", "123456789", "", "x5@mail.ru", "", "", "veselyebobry.ru", ""));
     }
 
     @Test
