@@ -16,7 +16,7 @@ import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.List;
 
-public class ContactCreationTests extends TestBase{
+public class ContactCreationTests extends TestBase {
 
 
     public static List<ContactData> contactProvider() throws IOException {
@@ -36,7 +36,8 @@ public class ContactCreationTests extends TestBase{
 //        }
 
         ObjectMapper mapper = new ObjectMapper();
-        var value = mapper.readValue(new File("contacts.json"), new TypeReference<List<ContactData>>() {});
+        var value = mapper.readValue(new File("contacts.json"), new TypeReference<List<ContactData>>() {
+        });
         result.addAll(value);
         return result;
     }
@@ -58,13 +59,14 @@ public class ContactCreationTests extends TestBase{
             return Integer.compare(Integer.parseInt(o1.id()), Integer.parseInt(o2.id()));
         };
         newContacts.sort(compareById);
-        var maxId = newContacts.get(newContacts.size() -1).id();
+        var maxId = newContacts.get(newContacts.size() - 1).id();
 
         var expectedList = new ArrayList<>(oldContacts);
         expectedList.add(contact.withId(maxId));
         expectedList.sort(compareById);
         Assertions.assertEquals(newContacts, expectedList);
     }
+
     @Test
     public void createContacts() {
         app.contacts().createContactWithoutPhoto(new ContactData("", "Ivan", "Ivanovich", "Moscow", "123456789", "x5@mail.ru", "veselyebobry.ru", ""));
@@ -117,10 +119,18 @@ public class ContactCreationTests extends TestBase{
                     .withLastname(CommonFunctions.randomString(10))
                     .withPhoto(randomFile("src/test/resources/images"));
             app.contacts().createContactWithPhoto(contact);
+            contacts = app.hbm().getContactList();
+            for (var c : contacts) {
+                var contactsInGroup = app.hbm().getContactsInGroup(group);
+                if (!contactsInGroup.contains(c)) {
+                    contact = c;
+                    break;
+                }
+            }
+            var contactsInGroup = app.hbm().getContactsInGroup(group);
+            app.contacts().addContactToGroup(contact, group);
+            var contactsInGroupNew = app.hbm().getContactsInGroup(group);
+            Assertions.assertEquals(contactsInGroup.size() + 1, contactsInGroupNew.size());
         }
-        var contactsInGroup = app.hbm().getContactsInGroup(group);
-        app.contacts().addContactToGroup(contact, group);
-        var contactsInGroupNew = app.hbm().getContactsInGroup(group);
-        Assertions.assertEquals(contactsInGroup.size() + 1, contactsInGroupNew.size());
     }
 }

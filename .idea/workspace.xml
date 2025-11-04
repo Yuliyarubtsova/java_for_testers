@@ -303,27 +303,27 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/addressbook_web_tests1/src/test/java/ru/stqa/addressbook/tests/ContactCreationTests.java</url>
-          <line>103</line>
+          <line>105</line>
           <option name="timeStamp" value="88" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/addressbook_web_tests1/src/test/java/ru/stqa/addressbook/tests/ContactCreationTests.java</url>
-          <line>104</line>
+          <line>106</line>
           <option name="timeStamp" value="89" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/addressbook_web_tests1/src/test/java/ru/stqa/addressbook/tests/ContactCreationTests.java</url>
-          <line>120</line>
+          <line>129</line>
           <option name="timeStamp" value="90" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/addressbook_web_tests1/src/test/java/ru/stqa/addressbook/tests/ContactCreationTests.java</url>
-          <line>121</line>
+          <line>130</line>
           <option name="timeStamp" value="91" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/addressbook_web_tests1/src/test/java/ru/stqa/addressbook/tests/ContactCreationTests.java</url>
-          <line>123</line>
+          <line>132</line>
           <option name="timeStamp" value="92" />
         </line-breakpoint>
       </breakpoints>
