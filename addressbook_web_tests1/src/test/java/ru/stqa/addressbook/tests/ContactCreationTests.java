@@ -48,7 +48,6 @@ public class ContactCreationTests extends TestBase {
                 .withLastname(CommonFunctions.randomString(10))
                 .withAddress(CommonFunctions.randomString(15)));
     }
-
     @ParameterizedTest
     @MethodSource("singleRandomContact")
     public void canCreateSingleContact(ContactData contact) {
@@ -104,33 +103,19 @@ public class ContactCreationTests extends TestBase {
             app.hbm().createGroup(new GroupData("", "group name", "group header", "group footer"));
         }
         var group = app.hbm().getGroupList().get(0);
-        var contacts = app.hbm().getContactList();
-        ContactData contact = null;
-        for (var c : contacts) {
-            var contactsInGroup = app.hbm().getContactsInGroup(group);
-            if (!contactsInGroup.contains(c)) {
-                contact = c;
-                break;
-            }
-        }
+        ContactData contact = app.contacts().findContactNotInGroup(group);
+
         if (contact == null) {
             contact = new ContactData()
                     .withFirstname(CommonFunctions.randomString(10))
                     .withLastname(CommonFunctions.randomString(10))
                     .withPhoto(randomFile("src/test/resources/images"));
             app.contacts().createContactWithPhoto(contact);
-            contacts = app.hbm().getContactList();
-            for (var c : contacts) {
-                var contactsInGroup = app.hbm().getContactsInGroup(group);
-                if (!contactsInGroup.contains(c)) {
-                    contact = c;
-                    break;
-                }
-            }
+            contact = app.contacts().findContactNotInGroup(group);
+        }
             var contactsInGroup = app.hbm().getContactsInGroup(group);
             app.contacts().addContactToGroup(contact, group);
             var contactsInGroupNew = app.hbm().getContactsInGroup(group);
             Assertions.assertEquals(contactsInGroup.size() + 1, contactsInGroupNew.size());
         }
     }
-}

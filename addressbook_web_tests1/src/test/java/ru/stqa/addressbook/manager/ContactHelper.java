@@ -12,11 +12,25 @@ import java.util.List;
 import java.util.Map;
 import java.util.stream.Stream;
 
+import static ru.stqa.addressbook.tests.TestBase.app;
+
 public class ContactHelper extends HelperBase {
 
     public ContactHelper(ApplicationManager manager) {
         super(manager);
 
+    }
+
+    public ContactData findContactNotInGroup(GroupData group) {
+        var allContacts = app.hbm().getContactList();
+        var contactsInGroup = app.hbm().getContactsInGroup(group);
+
+        for (var contact : allContacts) {
+            if (!contactsInGroup.contains(contact)) {
+                return contact;
+            }
+        }
+        return null;
     }
 
     public int getCountContacts() {
@@ -199,4 +213,6 @@ public class ContactHelper extends HelperBase {
         }
         return result;
     }
+
+
 }

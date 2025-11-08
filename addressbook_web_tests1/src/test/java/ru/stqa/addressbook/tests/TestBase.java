@@ -14,7 +14,7 @@ import java.util.Random;
 
 public class TestBase {
 
-    protected static ApplicationManager app;
+    public static ApplicationManager app;
 
     @BeforeEach
     public void setUp() throws IOException {
