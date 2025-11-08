@@ -35,7 +35,7 @@
             <expand>
               <path>
                 <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
-                <item name="sandbox" type="f1a62948:ProjectNode" />
+                <item name="mantis_tests" type="f1a62948:ProjectNode" />
               </path>
             </expand>
             <select />
@@ -70,7 +70,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "jdk.selected.JAVA_MODULE": "zulu-17",
-    "last_opened_file_path": "C:/Users/ПК/Documents/ST/Homework/java_for_testers",
+    "last_opened_file_path": "C:/Users/ПК/Documents/ST/Homework/java_for_testers/mantis_tests",
     "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.3816092",
@@ -80,6 +80,7 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\ПК\Documents\ST\Homework\java_for_testers\mantis_tests" />
       <recent name="C:\Users\ПК\Documents\ST\Homework\java_for_testers\addressbook_web_tests1" />
     </key>
     <key name="MoveMembersDialog.RECENTS_KEY">
@@ -89,7 +90,7 @@
       <recent name="Rectangle" />
     </key>
   </component>
-  <component name="RunManager" selected="Gradle.ContactCreationTests.addContactToGroup">
+  <component name="RunManager" selected="Gradle.LoginTests.canLogin">
     <configuration name="CollectionTests.testMap" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -159,29 +160,6 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="ContactInfoTests.testAddress" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$/addressbook_web_tests1" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value=":test" />
-            <option value="--tests" />
-            <option value="&quot;ru.stqa.addressbook.tests.ContactInfoTests.testAddress&quot;" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <method v="2" />
-    </configuration>
     <configuration name="ContactInfoTests.testPhonesForAllContacts" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -205,6 +183,29 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
+    <configuration name="LoginTests.canLogin" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$/mantis_tests" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;ru.stqa.mantis.tests.LoginTests.canLogin&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <method v="2" />
+    </configuration>
     <configuration default="true" type="JetRunConfigurationType">
       <module name="java_for_testers" />
       <method v="2">
@@ -219,19 +220,19 @@
       </method>
     </configuration>
     <list>
+      <item itemvalue="Gradle.LoginTests.canLogin" />
       <item itemvalue="Gradle.CollectionTests.testMap" />
       <item itemvalue="Gradle.ContactCreationTests.canCreateContactInGroup" />
-      <item itemvalue="Gradle.ContactInfoTests.testAddress" />
       <item itemvalue="Gradle.ContactInfoTests.testPhonesForAllContacts" />
       <item itemvalue="Gradle.ContactCreationTests.addContactToGroup" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.LoginTests.canLogin" />
         <item itemvalue="Gradle.ContactCreationTests.addContactToGroup" />
         <item itemvalue="Gradle.ContactInfoTests.testPhonesForAllContacts" />
         <item itemvalue="Gradle.ContactCreationTests.canCreateContactInGroup" />
         <item itemvalue="Gradle.CollectionTests.testMap" />
-        <item itemvalue="Gradle.ContactInfoTests.testAddress" />
       </list>
     </recent_temporary>
   </component>
@@ -348,6 +349,21 @@
           <url>file://$PROJECT_DIR$/addressbook_web_tests1/src/test/java/ru/stqa/addressbook/tests/ContactInfoTests.java</url>
           <line>68</line>
           <option name="timeStamp" value="106" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/mantis_tests/src/test/java/ru/stqa/mantis/manager/ApplicationManager.java</url>
+          <line>26</line>
+          <option name="timeStamp" value="108" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/mantis_tests/src/test/java/ru/stqa/mantis/manager/ApplicationManager.java</url>
+          <line>38</line>
+          <option name="timeStamp" value="109" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/mantis_tests/src/test/java/ru/stqa/mantis/tests/TestBase.java</url>
+          <line>14</line>
+          <option name="timeStamp" value="111" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
