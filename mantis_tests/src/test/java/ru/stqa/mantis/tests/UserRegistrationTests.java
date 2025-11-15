@@ -8,6 +8,7 @@ import ru.stqa.mantis.common.CommonFunctions;
 import ru.stqa.mantis.model.ContactDataM;
 import ru.stqa.mantis.model.SignUpData;
 
+import java.time.Duration;
 import java.util.List;
 import java.util.function.Supplier;
 import java.util.stream.Stream;
@@ -49,4 +50,6 @@ public class UserRegistrationTests extends TestBaseM {
         Assertions.assertTrue(app.login().isLoggedIn());
 
     }
+
+
 }

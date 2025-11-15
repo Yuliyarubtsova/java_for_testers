@@ -19,6 +19,8 @@ public class ApplicationMan {
     private MailHelper mailHelper;
     private ContactHelp contacts;
     private LoginHelperM loginHelperM;
+    private JamesApiHelper jamesApiHelper;
+    private UserHelper userHelper;
 
 
     public void init(String browser, Properties properties) {
@@ -37,7 +39,7 @@ public class ApplicationMan {
                 }
                 Runtime.getRuntime().addShutdownHook(new Thread(driver::quit));
                 driver.get(properties.getProperty("web.baseUrl"));
-                driver.manage().window().setSize(new Dimension(757, 691));
+                driver.manage().window().setSize(new Dimension(1257, 691));
                 //session().login(properties.getProperty("web.username"), properties.getProperty("web.password"));
         }
         return driver;
@@ -64,11 +66,25 @@ public class ApplicationMan {
         return jamesCliHelper;
     }
 
+    public JamesApiHelper jamesApi() {
+        if (jamesApiHelper == null) {
+            jamesApiHelper = new JamesApiHelper(this);
+        }
+        return jamesApiHelper;
+    }
+
     public MailHelper mail() {
         if (mailHelper == null) {
             mailHelper = new MailHelper(this);
         }
         return mailHelper;
+    }
+
+    public UserHelper user() {
+        if (userHelper == null) {
+            userHelper = new UserHelper(this);
+        }
+        return userHelper;
     }
 
     public LoginHelperM login() {
@@ -87,6 +103,8 @@ public class ApplicationMan {
         }
         return contacts;
     }
+
+
 
 
 }
