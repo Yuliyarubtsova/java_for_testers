@@ -2,20 +2,21 @@ package ru.stqa.mantis.manager;
 
 import org.openqa.selenium.By;
 
-public class SessionHelper extends HelperB {
-
-    public SessionHelper(ApplicationMan manager) {
+public class LoginHelperM extends HelperB{
+    public LoginHelperM(ApplicationMan manager) {
         super(manager);
     }
 
-    public void login(String user, String password) {
-        type(By.name("username"), user);
+    public void loginApp(String username, String password) {
+
+        type(By.name("username"), username);
         click(By.cssSelector("input[type='submit']"));
-        type(By.name("password"), password);
+        type(By.name("password"),password);
         click(By.cssSelector("input[type='submit']"));
     }
 
     public boolean isLoggedIn() {
         return isElementPresent(By.cssSelector("span.user-info"));
     }
-}
+    }
+

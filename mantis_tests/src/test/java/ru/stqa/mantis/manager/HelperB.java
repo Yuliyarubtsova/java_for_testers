@@ -4,10 +4,10 @@ import org.openqa.selenium.By;
 
 import java.nio.file.Paths;
 
-public class HelperBase {
-    protected final ApplicationManager manager;
+public class HelperB {
+    protected final ApplicationMan manager;
 
-    public HelperBase(ApplicationManager manager) {
+    public HelperB(ApplicationMan manager) {
         this.manager = manager;
     }
 
