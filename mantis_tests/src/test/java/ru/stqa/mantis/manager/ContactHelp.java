@@ -1,16 +1,14 @@
 package ru.stqa.mantis.manager;
 
 import org.openqa.selenium.By;
-import ru.stqa.mantis.model.ContactDataM;
-
-import static ru.stqa.mantis.tests.TestBaseM.app;
+import ru.stqa.mantis.model.UserData;
 
 public class ContactHelp extends HelperB {
     public ContactHelp(ApplicationMan manager) {
         super(manager);
     }
 
-    public void createContact(ContactDataM contact) {
+    public void createContact(UserData contact) {
         pressSignUp();
         fillContactForm(contact);
         submitContactCreation();
@@ -21,7 +19,7 @@ public class ContactHelp extends HelperB {
         click(By.cssSelector("input[type='submit']"));
     }
 
-    private void fillContactForm(ContactDataM contact) {
+    private void fillContactForm(UserData contact) {
         type(By.name("username"), contact.username());
         type(By.name("email"), contact.email());
     }

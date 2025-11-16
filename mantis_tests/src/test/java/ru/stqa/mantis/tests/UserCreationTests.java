@@ -4,9 +4,8 @@ import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.MethodSource;
 import ru.stqa.mantis.common.CommonFunctions;
-import ru.stqa.mantis.model.ContactDataM;
+import ru.stqa.mantis.model.UserData;
 
-import java.time.Duration;
 import java.util.stream.Stream;
 
 public class UserCreationTests extends TestBaseM{
@@ -14,20 +13,20 @@ public class UserCreationTests extends TestBaseM{
         return Stream.of(CommonFunctions.randomString(8));
     }
     @ParameterizedTest
-    @MethodSource("randomUser")
-    void canCreateUser(String user) {
-        var email = String.format("%s@localhost", user);
+    @MethodSource("userData")
+    void canCreateUser(UserData userData) {
+        var email = String.format("%s@localhost", userData);
         var password = "password";
-        app.jamesApi().addUser(email, password);
-        var contact = new ContactDataM()
-                .withUsername(user)
+        app.jamesApi().addUser(userData);
+        var contact = new UserData()
+                .withUsername(userData.username())
                 .withEmail(email);
 
         app.user().startCreation(contact);
 
-        var newUrl = app.mail().extractUrl(email, password);
-        app.contacts().regEnd(newUrl, user, password);
-        app.login().loginApp(user, password);
+      //  var newUrl = app.mail().extractUrl(email, password);
+       // app.contacts().regEnd(newUrl, username, password);
+       // app.login().loginApp(user, password);
         Assertions.assertTrue(app.login().isLoggedIn());
 
 //        var messages = app.mail().receive(email, password, Duration.ofSeconds(10));

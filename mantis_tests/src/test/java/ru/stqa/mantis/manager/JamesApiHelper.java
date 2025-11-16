@@ -2,6 +2,7 @@ package ru.stqa.mantis.manager;
 
 
 import okhttp3.*;
+import ru.stqa.mantis.model.UserData;
 
 import java.io.IOException;
 import java.net.CookieManager;
@@ -16,11 +17,11 @@ public class JamesApiHelper extends HelperB {
         client = new OkHttpClient.Builder().cookieJar(new JavaNetCookieJar(new CookieManager())).build();
     }
 
-    public void addUser(String email, String password) {
+    public void addUser(UserData userData) {
         RequestBody body = RequestBody.create(
-                String.format("{\"password\":\"%s\"}", password), JSON);
+                String.format("{\"password\":\"%s\"}", userData.password()), JSON);
         Request request = new Request.Builder()
-                .url(String.format("%s/users/%s", manager.property("james.apiBaseUrl"), email))
+                .url(String.format("%s/users/%s", manager.property("james.apiBaseUrl"), userData.email()))
                 .put(body)
                 .build();
         try (Response response = client.newCall(request).execute()) {

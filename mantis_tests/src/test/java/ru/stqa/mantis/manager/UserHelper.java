@@ -1,7 +1,7 @@
 package ru.stqa.mantis.manager;
 
 import org.openqa.selenium.By;
-import ru.stqa.mantis.model.ContactDataM;
+import ru.stqa.mantis.model.UserData;
 import ru.stqa.mantis.model.MailMessage;
 
 import java.util.List;
@@ -13,7 +13,7 @@ public class UserHelper extends HelperB{
         super(manager);
     }
 
-    public void startCreation(ContactDataM contact) {
+    public void startCreation(UserData contact) {
         app.login().loginApp("administrator", "root");
         pressAddNewContact();
         fillContactForm(contact);
@@ -26,7 +26,7 @@ public class UserHelper extends HelperB{
 
     }
 
-    private void fillContactForm(ContactDataM contact) {
+    private void fillContactForm(UserData contact) {
         type(By.name("username"), contact.username());
         type(By.name("realname"), contact.realname());
         type(By.name("email"), contact.email());
