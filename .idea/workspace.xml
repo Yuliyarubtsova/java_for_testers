@@ -69,21 +69,22 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;zulu-17&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/ПК/Downloads/ST_Java-main&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.3816092&quot;,
-    &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settingsdialog.project.gradle&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "jdk.selected.JAVA_MODULE": "zulu-17",
+    "last_opened_file_path": "C:/Users/User/Documents/ST/Homework/java_for_testers/mantis_tests/src/test/java",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.3816092",
+    "run.code.analysis.last.selected.profile": "pProject Default",
+    "settings.editor.selected.configurable": "reference.settingsdialog.project.gradle"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\User\Documents\ST\Homework\java_for_testers\mantis_tests\src\test\java" />
       <recent name="C:\Users\ПК\Documents\ST\Homework\java_for_testers\mantis_tests\src\test\java\ru\stqa\mantis" />
       <recent name="C:\Users\ПК\Documents\ST\Homework\java_for_testers\mantis_tests" />
       <recent name="C:\Users\ПК\Documents\ST\Homework\java_for_testers\addressbook_web_tests1" />
@@ -95,7 +96,30 @@
       <recent name="Rectangle" />
     </key>
   </component>
-  <component name="RunManager" selected="Gradle.UserRegistrationTests.canRegisterUser">
+  <component name="RunManager" selected="Gradle.IssueCreationTests.canCreateIssue">
+    <configuration name="IssueCreationTests.canCreateIssue" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$/mantis_tests" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;ru.stqa.mantis.tests.IssueCreationTests.canCreateIssue&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <method v="2" />
+    </configuration>
     <configuration name="LoginTests.canLogin" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -110,29 +134,6 @@
             <option value=":test" />
             <option value="--tests" />
             <option value="&quot;ru.stqa.mantis.tests.LoginTests.canLogin&quot;" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <method v="2" />
-    </configuration>
-    <configuration name="MailTests.canDrainInbox" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$/mantis_tests" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value=":test" />
-            <option value="--tests" />
-            <option value="&quot;ru.stqa.mantis.tests.MailTests.canDrainInbox&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -211,21 +212,8 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
-    <configuration default="true" type="JetRunConfigurationType">
-      <module name="java_for_testers" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
-      <module name="java_for_testers" />
-      <option name="filePath" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <list>
-      <item itemvalue="Gradle.MailTests.canDrainInbox" />
+      <item itemvalue="Gradle.IssueCreationTests.canCreateIssue" />
       <item itemvalue="Gradle.MailTests.canExtractUrl" />
       <item itemvalue="Gradle.MailTests.canReceiveEmail" />
       <item itemvalue="Gradle.UserRegistrationTests.canRegisterUser" />
@@ -233,11 +221,11 @@
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.IssueCreationTests.canCreateIssue" />
         <item itemvalue="Gradle.UserRegistrationTests.canRegisterUser" />
         <item itemvalue="Gradle.LoginTests.canLogin" />
         <item itemvalue="Gradle.MailTests.canExtractUrl" />
         <item itemvalue="Gradle.MailTests.canReceiveEmail" />
-        <item itemvalue="Gradle.MailTests.canDrainInbox" />
       </list>
     </recent_temporary>
   </component>
@@ -357,12 +345,12 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/mantis_tests/src/test/java/ru/stqa/mantis/manager/ApplicationMan.java</url>
-          <line>30</line>
+          <line>31</line>
           <option name="timeStamp" value="108" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/mantis_tests/src/test/java/ru/stqa/mantis/manager/ApplicationMan.java</url>
-          <line>42</line>
+          <line>43</line>
           <option name="timeStamp" value="109" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
