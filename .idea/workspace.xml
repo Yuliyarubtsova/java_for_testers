@@ -95,8 +95,11 @@
       <recent name="Square" />
       <recent name="Rectangle" />
     </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="ru.stqa.mantis.manager" />
+    </key>
   </component>
-  <component name="RunManager" selected="Gradle.UserRegistrationTests.canRegisterUserWithApiRest">
+  <component name="RunManager" selected="Gradle.IssueCreationTests.canCreateIssue">
     <configuration name="IssueCreationTests.canCreateIssue" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -221,8 +224,8 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Gradle.UserRegistrationTests.canRegisterUserWithApiRest" />
         <item itemvalue="Gradle.IssueCreationTests.canCreateIssue" />
+        <item itemvalue="Gradle.UserRegistrationTests.canRegisterUserWithApiRest" />
         <item itemvalue="Gradle.UserRegistrationTests.canRegisterUser" />
         <item itemvalue="Gradle.LoginTests.canLogin" />
         <item itemvalue="Gradle.MailTests.canExtractUrl" />
@@ -345,12 +348,12 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/mantis_tests/src/test/java/ru/stqa/mantis/manager/ApplicationMan.java</url>
-          <line>31</line>
+          <line>32</line>
           <option name="timeStamp" value="108" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/mantis_tests/src/test/java/ru/stqa/mantis/manager/ApplicationMan.java</url>
-          <line>43</line>
+          <line>44</line>
           <option name="timeStamp" value="109" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
