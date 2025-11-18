@@ -3,6 +3,9 @@ package ru.stqa.addressbook.tests;
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import io.qameta.allure.Allure;
+import org.openqa.selenium.By;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import ru.stqa.addressbook.common.CommonFunctions;
 import ru.stqa.addressbook.model.ContactData;
 import org.junit.jupiter.api.Assertions;
@@ -13,6 +16,7 @@ import ru.stqa.addressbook.model.GroupData;
 
 import java.io.File;
 import java.io.IOException;
+import java.time.Duration;
 import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.List;
@@ -106,16 +110,29 @@ public class ContactCreationTests extends TestBase {
         }
         });
         var group = app.hbm().getGroupList().get(0);
-        ContactData contact = app.contacts().findContactNotInGroup(group);
+        ContactData contact = null;
+//        ContactData contact = app.contacts().findContactNotInGroup(group);
 
-        if (contact == null) {
+        if (app.hbm().getContactCount() == 0) {
             contact = new ContactData()
+                    .withId("")
                     .withFirstname(CommonFunctions.randomString(10))
                     .withLastname(CommonFunctions.randomString(10))
                     .withPhoto(randomFile("src/test/resources/images"));
             app.contacts().createContactWithPhoto(contact);
-            contact = app.contacts().findContactNotInGroup(group);
+            contact = app.hbm().getContactList().get(0);
+        } else {
+            contact = app.hbm().getContactList().get(0);
         }
+
+//        if (contact == null) {
+//            contact = new ContactData()
+//                    .withFirstname(CommonFunctions.randomString(10))
+//                    .withLastname(CommonFunctions.randomString(10))
+//                    .withPhoto(randomFile("src/test/resources/images"));
+//            app.contacts().createContactWithPhoto(contact);
+//            contact = app.contacts().findContactNotInGroup(group);
+//        }
             var contactsInGroup = app.hbm().getContactsInGroup(group);
             app.contacts().addContactToGroup(contact, group);
             var contactsInGroupNew = app.hbm().getContactsInGroup(group);

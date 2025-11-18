@@ -89,14 +89,16 @@ public class ContactHelper extends HelperBase {
     }
 
     public void addContactToGroup(ContactData contact, GroupData group) {
+        WebDriverWait wait = new WebDriverWait(app.driver, Duration.ofSeconds(5));
+        wait.until(ExpectedConditions.presenceOfElementLocated(By.name("group")));
+        returnToHome();
         selectContact(contact);
-
         selectGroupForContact(group);
         pressAddTo();
         returnToHome();
-        WebDriverWait wait = new WebDriverWait(app.driver, Duration.ofSeconds(10));
         wait.until(ExpectedConditions.presenceOfElementLocated(
                 By.cssSelector("select[name='group'] option[value='" + group.id() + "']")));
+        returnToHome();
     }
 
     private void pressAddTo() {
