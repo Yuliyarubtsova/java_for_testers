@@ -62,7 +62,7 @@
     <option name="stateVersion" value="1" />
   </component>
   <component name="ProblemsViewState">
-    <option name="selectedTabId" value="CurrentFile" />
+    <option name="selectedTabId" value="ProjectErrors" />
   </component>
   <component name="ProjectId" id="32eCKRpk3lC7BZsWVBz17h9MXcb" />
   <component name="ProjectViewState">
@@ -75,7 +75,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "jdk.selected.JAVA_MODULE": "zulu-17",
     "last_opened_file_path": "C:/Users/User/Documents/ST/Homework/java_for_testers/mantis_tests/src/test/java",
-    "project.structure.last.edited": "Modules",
+    "project.structure.last.edited": "Problems",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.3816092",
     "run.code.analysis.last.selected.profile": "pProject Default",
@@ -99,11 +99,11 @@
       <recent name="ru.stqa.mantis.manager" />
     </key>
   </component>
-  <component name="RunManager" selected="Gradle.IssueCreationTests.canCreateIssue">
-    <configuration name="IssueCreationTests.canCreateIssue" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+  <component name="RunManager" selected="Gradle.Tests in 'ru.stqa.addressbook.tests'">
+    <configuration name="ContactCreationTests.addContactToGroup" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$/mantis_tests" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$/addressbook_web_tests1" />
         <option name="externalSystemIdString" value="GRADLE" />
         <option name="scriptParameters" value="" />
         <option name="taskDescriptions">
@@ -113,7 +113,7 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;ru.stqa.mantis.tests.IssueCreationTests.canCreateIssue&quot;" />
+            <option value="&quot;ru.stqa.addressbook.tests.ContactCreationTests.addContactToGroup&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -123,10 +123,10 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="LoginTests.canLogin" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="ContactRemovalTests.removeAllContactTests" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$/mantis_tests" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$/addressbook_web_tests1" />
         <option name="externalSystemIdString" value="GRADLE" />
         <option name="scriptParameters" value="" />
         <option name="taskDescriptions">
@@ -136,7 +136,7 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;ru.stqa.mantis.tests.LoginTests.canLogin&quot;" />
+            <option value="&quot;ru.stqa.addressbook.tests.ContactRemovalTests.removeAllContactTests&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -146,10 +146,10 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="MailTests.canExtractUrl" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="ContactRemovalTests.removeContactFromGroup" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$/mantis_tests" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$/addressbook_web_tests1" />
         <option name="externalSystemIdString" value="GRADLE" />
         <option name="scriptParameters" value="" />
         <option name="taskDescriptions">
@@ -159,7 +159,7 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;ru.stqa.mantis.tests.MailTests.canExtractUrl&quot;" />
+            <option value="&quot;ru.stqa.addressbook.tests.ContactRemovalTests.removeContactFromGroup&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -169,10 +169,10 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="UserRegistrationTests.canRegisterUser" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="ContactRemovalTests.removeContactTests" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$/mantis_tests" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$/addressbook_web_tests1" />
         <option name="externalSystemIdString" value="GRADLE" />
         <option name="scriptParameters" value="" />
         <option name="taskDescriptions">
@@ -182,7 +182,7 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;ru.stqa.mantis.tests.UserRegistrationTests.canRegisterUser&quot;" />
+            <option value="&quot;ru.stqa.addressbook.tests.ContactRemovalTests.removeContactTests&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -192,10 +192,10 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="UserRegistrationTests.canRegisterUserWithApiRest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="Tests in 'ru.stqa.addressbook.tests'" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$/mantis_tests" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$/addressbook_web_tests1" />
         <option name="externalSystemIdString" value="GRADLE" />
         <option name="scriptParameters" value="" />
         <option name="taskDescriptions">
@@ -205,7 +205,7 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;ru.stqa.mantis.tests.UserRegistrationTests.canRegisterUserWithApiRest&quot;" />
+            <option value="&quot;ru.stqa.addressbook.tests.*&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -216,19 +216,19 @@
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="Gradle.IssueCreationTests.canCreateIssue" />
-      <item itemvalue="Gradle.UserRegistrationTests.canRegisterUserWithApiRest" />
-      <item itemvalue="Gradle.MailTests.canExtractUrl" />
-      <item itemvalue="Gradle.UserRegistrationTests.canRegisterUser" />
-      <item itemvalue="Gradle.LoginTests.canLogin" />
+      <item itemvalue="Gradle.ContactCreationTests.addContactToGroup" />
+      <item itemvalue="Gradle.ContactRemovalTests.removeAllContactTests" />
+      <item itemvalue="Gradle.ContactRemovalTests.removeContactFromGroup" />
+      <item itemvalue="Gradle.ContactRemovalTests.removeContactTests" />
+      <item itemvalue="Gradle.Tests in 'ru.stqa.addressbook.tests'" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Gradle.IssueCreationTests.canCreateIssue" />
-        <item itemvalue="Gradle.UserRegistrationTests.canRegisterUserWithApiRest" />
-        <item itemvalue="Gradle.UserRegistrationTests.canRegisterUser" />
-        <item itemvalue="Gradle.LoginTests.canLogin" />
-        <item itemvalue="Gradle.MailTests.canExtractUrl" />
+        <item itemvalue="Gradle.Tests in 'ru.stqa.addressbook.tests'" />
+        <item itemvalue="Gradle.ContactRemovalTests.removeContactTests" />
+        <item itemvalue="Gradle.ContactCreationTests.addContactToGroup" />
+        <item itemvalue="Gradle.ContactRemovalTests.removeAllContactTests" />
+        <item itemvalue="Gradle.ContactRemovalTests.removeContactFromGroup" />
       </list>
     </recent_temporary>
   </component>
@@ -253,7 +253,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/addressbook_web_tests1/src/test/java/ru/stqa/addressbook/manager/ContactHelper.java</url>
-          <line>128</line>
+          <line>142</line>
           <option name="timeStamp" value="52" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
@@ -262,43 +262,28 @@
           <option name="timeStamp" value="58" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/addressbook_web_tests1/src/test/java/ru/stqa/addressbook/tests/ContactRemovalTests.java</url>
-          <line>19</line>
-          <option name="timeStamp" value="64" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/addressbook_web_tests1/src/test/java/ru/stqa/addressbook/tests/ContactRemovalTests.java</url>
-          <line>17</line>
-          <option name="timeStamp" value="65" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/addressbook_web_tests1/src/test/java/ru/stqa/addressbook/tests/ContactModificationTests.java</url>
           <line>15</line>
           <option name="timeStamp" value="67" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/addressbook_web_tests1/src/test/java/ru/stqa/addressbook/tests/ContactRemovalTests.java</url>
-          <line>54</line>
+          <line>61</line>
           <option name="timeStamp" value="68" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/addressbook_web_tests1/src/test/java/ru/stqa/addressbook/tests/ContactRemovalTests.java</url>
-          <line>41</line>
-          <option name="timeStamp" value="69" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/addressbook_web_tests1/src/test/java/ru/stqa/addressbook/manager/ContactHelper.java</url>
-          <line>81</line>
+          <line>91</line>
           <option name="timeStamp" value="77" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/addressbook_web_tests1/src/test/java/ru/stqa/addressbook/tests/ContactRemovalTests.java</url>
-          <line>61</line>
+          <line>68</line>
           <option name="timeStamp" value="81" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/addressbook_web_tests1/src/test/java/ru/stqa/addressbook/tests/GroupCreationTests.java</url>
-          <line>49</line>
+          <line>48</line>
           <option name="timeStamp" value="87" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
@@ -390,6 +375,41 @@
           <url>file://$PROJECT_DIR$/mantis_tests/src/test/java/ru/stqa/mantis/tests/UserRegistrationTests.java</url>
           <line>76</line>
           <option name="timeStamp" value="120" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/addressbook_web_tests1/src/test/java/ru/stqa/addressbook/tests/ContactRemovalTests.java</url>
+          <line>23</line>
+          <option name="timeStamp" value="122" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/addressbook_web_tests1/src/test/java/ru/stqa/addressbook/tests/ContactRemovalTests.java</url>
+          <line>24</line>
+          <option name="timeStamp" value="123" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/addressbook_web_tests1/src/test/java/ru/stqa/addressbook/manager/ContactHelper.java</url>
+          <line>74</line>
+          <option name="timeStamp" value="125" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/addressbook_web_tests1/src/test/java/ru/stqa/addressbook/manager/ContactHelper.java</url>
+          <line>84</line>
+          <option name="timeStamp" value="126" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/addressbook_web_tests1/src/test/java/ru/stqa/addressbook/manager/ContactHelper.java</url>
+          <line>85</line>
+          <option name="timeStamp" value="127" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/addressbook_web_tests1/src/test/java/ru/stqa/addressbook/tests/ContactRemovalTests.java</url>
+          <line>37</line>
+          <option name="timeStamp" value="129" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/addressbook_web_tests1/src/test/java/ru/stqa/addressbook/tests/ContactRemovalTests.java</url>
+          <line>38</line>
+          <option name="timeStamp" value="130" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

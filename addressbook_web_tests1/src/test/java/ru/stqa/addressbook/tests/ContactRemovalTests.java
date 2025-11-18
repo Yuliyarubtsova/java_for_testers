@@ -16,6 +16,7 @@ public class ContactRemovalTests extends TestBase {
     public void removeContactTests() {
         if (app.hbm().getContactCount() == 0) {
             app.hbm().createContact(new ContactData("", "Ivan", "Ivanovich", "Moscow", "", "123456789", "", "x5@mail.ru", "", "", "veselyebobry.ru", ""));
+            app.contacts().returnToHome();
         }
         var oldContacts = app.hbm().getContactList();
         var rnd = new Random();
@@ -31,7 +32,9 @@ public class ContactRemovalTests extends TestBase {
     public void removeAllContactTests() {
         if (app.hbm().getContactCount() == 0) {
             app.hbm().createContact(new ContactData("", "Ivan", "Ivanovich", "Moscow", "", "123456789", "", "x5@mail.ru", "", "", "veselyebobry.ru", ""));
+            app.contacts().returnToHome();
         }
+
         app.contacts().removeAllContacts();
         Assertions.assertEquals(0, app.hbm().getContactCount());
     }
@@ -43,18 +46,22 @@ public class ContactRemovalTests extends TestBase {
         }
         var group = app.hbm().getGroupList().get(0);
         ContactData contact = null;
+        boolean isNewContact = false;
         if (app.hbm().getContactCount() == 0) {
             contact = new ContactData()
+                    .withId("")
                     .withFirstname(CommonFunctions.randomString(10))
                     .withLastname(CommonFunctions.randomString(10))
                     .withPhoto(randomFile("src/test/resources/images"));
             app.contacts().createContactWithPhoto(contact, group);
+            contact = app.hbm().getContactList().get(0);
+            isNewContact = true;
         } else {
             contact = app.hbm().getContactList().get(0);
         }
         var contactsInGroup = app.hbm().getContactsInGroup(group);
 
-        if (!contactsInGroup.contains(contact)) {
+        if (!isNewContact && !contactsInGroup.contains(contact)) {
             app.contacts().addContactToGroup(contact, group);
             contactsInGroup = app.hbm().getContactsInGroup(group);
         }

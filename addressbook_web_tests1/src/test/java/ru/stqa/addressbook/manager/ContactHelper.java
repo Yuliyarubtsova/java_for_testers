@@ -1,11 +1,15 @@
 package ru.stqa.addressbook.manager;
 
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import ru.stqa.addressbook.model.ContactData;
 import org.openqa.selenium.By;
 import ru.stqa.addressbook.model.GroupData;
 
+import java.time.Duration;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -66,9 +70,15 @@ public class ContactHelper extends HelperBase {
 
 
     public void removeContact(ContactData contact) {
+        returnToHome();
+
         selectContact(contact);
         removeSelectedContacts();
         returnToHomePage();
+      //  WebDriverWait wait = new WebDriverWait(app.driver, Duration.ofSeconds(10));
+      //  wait.until(ExpectedConditions.presenceOfElementLocated(
+      //          By.cssSelector("input[value^='contact_']")));
+
     }
 
     public void removeContactFromGroup(GroupData group, ContactData contact) {
@@ -80,9 +90,13 @@ public class ContactHelper extends HelperBase {
 
     public void addContactToGroup(ContactData contact, GroupData group) {
         selectContact(contact);
+
         selectGroupForContact(group);
         pressAddTo();
         returnToHome();
+        WebDriverWait wait = new WebDriverWait(app.driver, Duration.ofSeconds(10));
+        wait.until(ExpectedConditions.presenceOfElementLocated(
+                By.cssSelector("select[name='group'] option[value='" + group.id() + "']")));
     }
 
     private void pressAddTo() {
