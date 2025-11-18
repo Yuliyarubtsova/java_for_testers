@@ -70,11 +70,12 @@ public class ContactHelper extends HelperBase {
 
 
     public void removeContact(ContactData contact) {
-        returnToHome();
-
+        pressLogo();
+        WebDriverWait wait = new WebDriverWait(app.driver, Duration.ofSeconds(10));
+        wait.until(ExpectedConditions.elementToBeClickable(By.name("selected[]")));
         selectContact(contact);
         removeSelectedContacts();
-        returnToHomePage();
+        returnToHome();
       //  WebDriverWait wait = new WebDriverWait(app.driver, Duration.ofSeconds(10));
       //  wait.until(ExpectedConditions.presenceOfElementLocated(
       //          By.cssSelector("input[value^='contact_']")));
@@ -98,7 +99,6 @@ public class ContactHelper extends HelperBase {
         returnToHome();
         wait.until(ExpectedConditions.presenceOfElementLocated(
                 By.cssSelector("select[name='group'] option[value='" + group.id() + "']")));
-        returnToHome();
     }
 
     private void pressAddTo() {
@@ -110,7 +110,11 @@ public class ContactHelper extends HelperBase {
     }
 
     public void returnToHome() {
-        click(By.linkText("home"));
+        new WebDriverWait(app.driver, Duration.ofSeconds(10))
+                .until(ExpectedConditions.elementToBeClickable(By.linkText("home")))
+                .click();
+        //click(By.linkText("home"));
+
     }
 
     private void pressRemoveFromGroup() {
@@ -119,6 +123,10 @@ public class ContactHelper extends HelperBase {
 
     private void pressGroupList(GroupData group) {
         new Select(manager.driver.findElement(By.name("group"))).selectByValue(group.id());
+    }
+
+    private void pressLogo() {
+        click(By.cssSelector("#logo"));
     }
 
     public void modifyContact(ContactData contact, ContactData modifiedContact) {
@@ -159,6 +167,7 @@ public class ContactHelper extends HelperBase {
     }
 
     private void selectContact(ContactData contact) {
+
         click(By.cssSelector(String.format("input[value='%s']", contact.id())));
     }
 
@@ -175,6 +184,9 @@ public class ContactHelper extends HelperBase {
     }
 
     public void removeAllContacts() {
+        pressLogo();
+        WebDriverWait wait = new WebDriverWait(app.driver, Duration.ofSeconds(5));
+        wait.until(ExpectedConditions.elementToBeClickable(By.name("selected[]")));
         selectAllContacts();
         removeSelectedContacts();
     }
@@ -184,6 +196,9 @@ public class ContactHelper extends HelperBase {
     }
 
     private void selectAllContacts() {
+        WebDriverWait wait = new WebDriverWait(app.driver, Duration.ofSeconds(5));
+        wait.until(ExpectedConditions.elementToBeClickable(By.name("selected[]")));
+
         var checkboxes = manager.driver.findElements(By.name("selected[]"));
         for (var checkbox : checkboxes) {
             checkbox.click();
