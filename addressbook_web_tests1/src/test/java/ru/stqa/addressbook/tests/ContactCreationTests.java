@@ -111,8 +111,6 @@ public class ContactCreationTests extends TestBase {
         });
         var group = app.hbm().getGroupList().get(0);
         ContactData contact = null;
-//        ContactData contact = app.contacts().findContactNotInGroup(group);
-
         if (app.hbm().getContactCount() == 0) {
             contact = new ContactData()
                     .withId("")
@@ -124,15 +122,6 @@ public class ContactCreationTests extends TestBase {
         } else {
             contact = app.hbm().getContactList().get(0);
         }
-
-//        if (contact == null) {
-//            contact = new ContactData()
-//                    .withFirstname(CommonFunctions.randomString(10))
-//                    .withLastname(CommonFunctions.randomString(10))
-//                    .withPhoto(randomFile("src/test/resources/images"));
-//            app.contacts().createContactWithPhoto(contact);
-//            contact = app.contacts().findContactNotInGroup(group);
-//        }
             var contactsInGroup = app.hbm().getContactsInGroup(group);
             app.contacts().addContactToGroup(contact, group);
             var contactsInGroupNew = app.hbm().getContactsInGroup(group);

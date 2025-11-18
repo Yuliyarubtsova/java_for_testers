@@ -46,7 +46,6 @@ public class ContactHelper extends HelperBase {
         fillContactFormWithPhoto(contact);
         submitContactCreation();
         returnToHomePage();
-
     }
 
     public void createContactWithPhoto(ContactData contact, GroupData group) {
@@ -68,7 +67,6 @@ public class ContactHelper extends HelperBase {
         returnToHome();
     }
 
-
     public void removeContact(ContactData contact) {
         pressLogo();
         WebDriverWait wait = new WebDriverWait(app.driver, Duration.ofSeconds(10));
@@ -76,10 +74,6 @@ public class ContactHelper extends HelperBase {
         selectContact(contact);
         removeSelectedContacts();
         returnToHome();
-      //  WebDriverWait wait = new WebDriverWait(app.driver, Duration.ofSeconds(10));
-      //  wait.until(ExpectedConditions.presenceOfElementLocated(
-      //          By.cssSelector("input[value^='contact_']")));
-
     }
 
     public void removeContactFromGroup(GroupData group, ContactData contact) {
@@ -113,8 +107,6 @@ public class ContactHelper extends HelperBase {
         new WebDriverWait(app.driver, Duration.ofSeconds(10))
                 .until(ExpectedConditions.elementToBeClickable(By.linkText("home")))
                 .click();
-        //click(By.linkText("home"));
-
     }
 
     private void pressRemoveFromGroup() {
@@ -134,7 +126,6 @@ public class ContactHelper extends HelperBase {
         fillContactFormWithoutPhoto(modifiedContact);
         submitContactModification();
         returnToHomePage();
-
     }
 
     private void submitContactModification() {
@@ -244,6 +235,4 @@ public class ContactHelper extends HelperBase {
         }
         return result;
     }
-
-
 }
