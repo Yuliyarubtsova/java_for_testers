@@ -2,6 +2,7 @@ package ru.stqa.addressbook.tests;
 
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import io.qameta.allure.Allure;
 import ru.stqa.addressbook.common.CommonFunctions;
 import ru.stqa.addressbook.model.ContactData;
 import org.junit.jupiter.api.Assertions;
@@ -99,9 +100,11 @@ public class ContactCreationTests extends TestBase {
 
     @Test
     public void addContactToGroup() {
+        Allure.step("Checking precondition", step -> {
         if (app.hbm().getGroupCount() == 0) {
             app.hbm().createGroup(new GroupData("", "group name", "group header", "group footer"));
         }
+        });
         var group = app.hbm().getGroupList().get(0);
         ContactData contact = app.contacts().findContactNotInGroup(group);
 
